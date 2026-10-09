@@ -1,0 +1,544 @@
+/* ================= IDENTIDAD VISUAL Y VARIABLES CSS ================= */
+:root {
+    --color-principal: #8B4513;     /* Tono tostado / marrón cálido artesanal */
+    --color-secundario: #d97706;    /* Naranja corporativo */
+    --color-complementario: #22c55e;/* Verde fresco */
+    --color-fondo: #fbf9f5;         /* Blanco marfil o crema suave */
+    --color-texto: #2d2d2d;         /* Texto oscuro legible */
+    --color-blanco: #ffffff;
+}
+
+/* ================= ESTILOS GENERALES Y RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--color-principal);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Clases reutilizables de botones */
+.boton {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #b45309;
+}
+
+.seccion-subtitulo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* ================= 1. HEADER ================= */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-blanco);
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-contenedor h1 {
+    font-size: 1.5rem;
+    color: var(--color-principal);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    font-weight: bold;
+    color: var(--color-texto);
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-secundario);
+}
+
+/* ================= 2. HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.hero-contenido {
+    flex: 1;
+}
+
+.hero-contenido h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-contenido p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagen img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ================= 3. SECCIÓN NOSOTROS ================= */
+.nosotros {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    border-radius: 8px;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.nosotros-texto h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+}
+
+.nosotros-texto p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ================= 4. PRODUCTOS ================= */
+.productos {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background: var(--color-blanco);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    border-radius: 6px;
+    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.boton-tarjeta {
+    display: block;
+    text-align: center;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton-tarjeta:hover {
+    background-color: #5c2c0c;
+}
+
+/* ================= 5. BENEFICIOS O SERVICIOS ================= */
+.servicios {
+    padding: 60px 40px;
+    background-color: #f3efe6;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.servicios-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.servicio-item {
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.servicio-item img {
+    margin: 0 auto 20px auto;
+}
+
+.servicio-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.servicio-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ================= 6. TABLA DE PRECIOS / PAQUETES ================= */
+.seccion-tabla {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-tabla h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla-precios th, 
+.tabla-precios td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-precios th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.tabla-precios tr:hover {
+    background-color: #f9f8f6;
+}
+
+/* ================= 7. GALERÍA ================= */
+.galeria {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-item {
+    width: calc(33.333% - 20px);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= 8. FORMULARIO DE CONTACTO ================= */
+.contacto {
+    padding: 60px 40px;
+    background-color: #f3efe6;
+}
+
+.contacto h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.contacto-contenedor {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--color-blanco);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campo-grupo {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-grupo.ancho-completo {
+    flex: 100%;
+}
+
+.campo-grupo label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-principal);
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    border-color: var(--color-secundario);
+}
+
+.boton-enviar {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* ================= 9. FOOTER ================= */
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-contenido h3 {
+    color: var(--color-secundario);
+    font-size: 1.5rem;
+}
+
+.footer-contenido p {
+    color: #e5e7eb;
+}
+
+.derechos {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    width: 100%;
+}
+
+/* ================= DISEÑO RESPONSIVE (MEDIA QUERIES) ================= */
+@media (max-width: 768px) {
+    /* Header vertical en celulares */
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Hero pasa de 2 columnas a 1 columna */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-contenido h2 {
+        font-size: 2rem;
+    }
+
+    /* Sección nosotros en columna única */
+    .nosotros {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    /* Reorganizar tarjetas de productos a una columna o flexible */
+    .producto {
+        width: 100%;
+    }
+
+    /* Galería items ocupan todo el ancho */
+    .galeria-item {
+        width: 100%;
+    }
+
+    /* Ajustes generales de padding */
+    .productos, .servicios, .seccion-tabla, .galeria, .contacto {
+        padding: 40px 20px;
+    }
+
+    .contacto-contenedor {
+        padding: 20px;
+    }
+
+    .icono-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+}
